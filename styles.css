@@ -1,0 +1,106 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7fafc; /* Colore di sfondo grigio chiaro */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #333; /* Colore del testo per intestazioni */
+}
+
+.header {
+    margin-bottom: 1rem; /* Spazio sotto l'intestazione */
+}
+
+.bg-white {
+    background-color: #fafafa; /* Colore di sfondo bianco per il contenitore */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Angoli arrotondati */
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Ombra per il contenitore */
+}
+
+.p-4 {
+    padding: 1rem; /* Padding interno */
+}
+
+.w-80 {
+    width: 20rem; /* Larghezza fissa per il contenitore */
+}
+
+.text-center {
+    text-align: center; /* Allineamento del testo al centro */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Dimensione del testo grande */
+}
+
+.text-xl {
+    font-size: 1.25rem; /* Dimensione del testo extra grande */
+}
+
+.font-bold {
+    font-weight: 700; /* Grassetto */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem; /* Margine inferiore */
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Margine inferiore */
+}
+
+.mt-4 {
+    margin-top: 1rem; /* Margine superiore */
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem; /* Spazio verticale tra gli elementi */
+}
+
+.flex {
+    display: flex; /* Display flessibile */
+}
+
+.items-center {
+    align-items: center; /* Allineamento verticale al centro */
+}
+
+.justify-between {
+    justify-content: space-between; /* Spaziatura tra gli elementi */
+}
+
+.bg-gray-100 {
+    background-color: #ffffff; /* Colore di sfondo grigio chiaro */
+}
+
+.p-2 {
+    padding: 0.5rem; /* Padding interno */
+}
+
+.text-green-500 {
+    color: #48bb78; /* Colore verde */
+}
+
+.text-blue-500 {
+    color: #4299e1; /* Colore blu */
+}
+
+.underline {
+    text-decoration: underline; /* Sottolineatura */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Angoli arrotondati */
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Ombra per il contenitore */
+}

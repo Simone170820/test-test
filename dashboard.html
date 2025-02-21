@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <nav class="w-48 bg-gray-800 text-white p-5">
+            <h2 class="text-center text-xl font-semibold mb-8">Pannello di controllo</h2>
+            <ul>
+                <li><a href="dashboard.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-tachometer-alt mr-3"></i> Dashboard</a></li>
+                <li><a href="modifica_il_sito.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-cogs mr-3"></i> Modifica Sito</a></li>
+                <li><a href="Carica_contenuti.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-upload mr-3"></i> Carica Contenuti</a></li>
+            </ul>
+            <div class="mt-auto">
+                <a href="Utenti.html" class="flex items-center py-2 px-4 bg-green-600 hover:bg-green-500 rounded mt-4 text-white"><i class="fas fa-users mr-3"></i> Utenti</a>
+                <a href="logout.php" class="flex items-center py-2 px-4 bg-red-600 hover:bg-red-500 rounded mt-4 text-white"><i class="fas fa-sign-out-alt mr-3"></i> Esci</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <h1 class="text-3xl font-semibold mb-6">Benvenuto nella Dashboard</h1>
+            <p class="text-lg">Gestisci il tuo sito e i tuoi contenuti da qui. Puoi modificare il sito, caricare nuovi contenuti e gestire gli utenti.</p>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carica Immagine | Educorp</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+        <h2 class="text-2xl font-bold text-center mb-6">Carica Immagine</h2>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="image" class="block text-sm font-semibold text-gray-700">Scegli Immagine</label>
+                <input type="file" name="image" id="image" class="w-full p-2 border rounded-md mt-1" required>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md mt-4">Carica</button>
+        </form>
+    </div>
+
+</body>
+</html>

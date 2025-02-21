@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carica Contenuti - Educorp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+            <a href="index.php" class="text-2xl font-semibold">Educorp</a>
+        </header>
+
+        <div class="flex flex-grow">
+            <!-- Sidebar -->
+            <nav class="w-48 bg-gray-800 text-white p-5">
+                <h2 class="text-center text-xl font-semibold mb-8">Pannelo di controllo</h2>
+                <ul>
+                    <li><a href="dashboard.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-tachometer-alt mr-3"></i> Dashboard</a></li>
+                    <li><a href="modifica_il_sito.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-cogs mr-3"></i> Modifica Sito</a></li>
+                    <li><a href="carica_contenuti.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-upload mr-3"></i> Carica Contenuti</a></li>
+                </ul>
+                <div class="mt-auto">
+                    <a href="logout.php" class="flex items-center py-2 px-4 bg-red-600 hover:bg-red-500 rounded mt-4 text-white">
+                        <i class="fas fa-sign-out-alt mr-3"></i> Esci
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="flex-1 p-6">
+                <!-- Carica Contenuti -->
+                <section id="carica-contenuti" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Carica un File</h3>
+                    <form action="carica_contenuti.php" method="post" enctype="multipart/form-data">
+                        <label for="file-contenuto" class="block text-lg mb-2">Carica il tuo file</label>
+                        <input type="file" id="file-contenuto" name="file-contenuto" class="w-full p-3 mb-4 border border-gray-300 rounded" required>
+
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 w-full">Carica File</button>
+                    </form>
+                </section>
+
+                <!-- Foto Caricate -->
+                <section id="foto-caricate" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Le tue Foto Caricate</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Esempio di immagine caricata -->
+                        <div class="bg-gray-200 p-4 rounded-lg">
+                            <img src="path_to_image1.jpg" alt="Immagine 1" class="w-full h-auto rounded">
+                            <p class="text-center mt-2">Foto 1</p>
+                        </div>
+                        <div class="bg-gray-200 p-4 rounded-lg">
+                            <img src="path_to_image2.jpg" alt="Immagine 2" class="w-full h-auto rounded">
+                            <p class="text-center mt-2">Foto 2</p>
+                        </div>
+                        <!-- Puoi aggiungere altre immagini -->
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

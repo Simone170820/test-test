@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educorp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="sensa sfondo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Rendi il menu sticky */
+        nav {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <nav class="w-48 bg-gray-800 text-white p-5">
+            <h2 class="text-center text-xl font-semibold mb-8">Pannello di controllo</h2>
+            <ul>
+                <li><a href="dashboard.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-tachometer-alt mr-3"></i> Dashboard</a></li>
+                <li><a href="modifica_il_sito.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-cogs mr-3"></i> Modifica Sito</a></li>
+                <li><a href="Carica_contenuti.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-upload mr-3"></i> Carica Contenuti</a></li>
+            </ul>
+            <div class="mt-auto">
+                <a href="Utenti.html" class="flex items-center py-2 px-4 bg-green-600 hover:bg-green-500 rounded mt-4 text-white"><i class="fas fa-users mr-3"></i> Utenti</a>
+                <a href="logout.php" class="flex items-center py-2 px-4 bg-red-600 hover:bg-red-500 rounded mt-4 text-white"><i class="fas fa-sign-out-alt mr-3"></i> Esci</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <div class="flex justify-center mt-4">
+                <div class="bg-white rounded-lg shadow-lg p-4 w-80">
+                    <div class="header text-center mb-4">
+                        <img src="download.png" alt="Logo Educorp" class="w-20 h-20 rounded-full mx-auto mb-2">
+                        <h1 class="text-xl font-bold">Educorp</h1>
+                        <h2 class="text-md font-semibold text-gray-600">Tecnologia e arredi per scuole e aziende</h2>
+                    </div>
+                    <h2 class="text-lg font-bold mt-4">Modifica Dettagli Cliente</h2>
+                    <form action="salva_modifiche.php" method="post">
+                        <div class="mb-4">
+                            <label for="cliente-nome" class="block text-sm font-semibold">Nome Cliente</label>
+                            <input type="text" id="cliente-nome" name="cliente_nome" class="w-full p-3 border border-gray-300 rounded" value="M4G SRL" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cliente-sede-operativa" class="block text-sm font-semibold">Sede Operativa</label>
+                            <input type="text" id="cliente-sede-operativa" name="cliente_sede_operativa" class="w-full p-3 border border-gray-300 rounded" value="Piazza Roma 2, 20861 Brugherio MB" required>
+                        </div>
+
+                        <!-- Sede Legale -->
+                        <div class="mb-4">
+                            <label for="cliente-sede-legale" class="block text-sm font-semibold">Sede Legale Cliente</label>
+                            <input type="text" id="cliente-sede-legale" name="cliente_sede_legale" class="w-full p-3 border border-gray-300 rounded" value="Via Caduti del Lavoro 16, 20861 Brugherio (MB)" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cliente-telefono" class="block text-sm font-semibold">Telefono Cliente</label>
+                            <input type="text" id="cliente-telefono" name="cliente_telefono" class="w-full p-3 border border-gray-300 rounded" value="+39 0399112680" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cliente-email" class="block text-sm font-semibold">Email Cliente</label>
+                            <input type="email" id="cliente-email" name="cliente_email" class="w-full p-3 border border-gray-300 rounded" value="info@educorp.it" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cliente-piva" class="block text-sm font-semibold">Partita IVA Cliente</label>
+                            <input type="text" id="cliente-piva" name="cliente_piva" class="w-full p-3 border border-gray-300 rounded" value="07322390969" required>
+                        </div>
+
+                        <!-- Link al sito -->
+                        <div class="mb-4">
+                            <label for="cliente-sito" class="block text-sm font-semibold">Link al Sito</label>
+                            <input type="url" id="cliente-sito" name="cliente_sito" class="w-full p-3 border border-gray-300 rounded" value="https://educorp.it" required>
+                        </div>
+
+                        <!-- Link ai social -->
+                        <div class="mb-4">
+                            <label for="cliente-linkedin" class="block text-sm font-semibold">LinkedIn</label>
+                            <input type="url" id="cliente-linkedin" name="cliente_linkedin" class="w-full p-3 border border-gray-300 rounded" value="https://www.linkedin.com/company/educorp-scuola/" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cliente-facebook" class="block text-sm font-semibold">Facebook</label>
+                            <input type="url" id="cliente-facebook" name="cliente_facebook" class="w-full p-3 border border-gray-300 rounded" value="https://www.facebook.com/profile.php?id=61572322900257" required>
+                        </div>
+
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 w-full">Salva Modifiche</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Utente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-100">
+    <div class="flex flex-col h-screen">
+        <!-- Header con Educorp Button -->
+        <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+            <a href="index.php" class="text-2xl font-semibold">Educorp</a>
+        </header>
+
+        <div class="flex flex-grow">
+            <!-- Sidebar -->
+            <nav class="w-48 bg-gray-800 text-white p-5">
+                <h2 class="text-center text-xl font-semibold mb-8">Pannelo di controllo </h2>
+                <ul>
+                    <!-- Pulsante Dashboard -->
+                    <li><a href="dashboard.html" class="flex items-center py-2 px-4 hover:bg-gray-700">
+                        <i class="fas fa-tachometer-alt mr-3"></i> Dashboard</a></li>
+
+                    <!-- Pulsante per Modifica Sito -->
+                    <li><a href="modifica_il_sito.html" class="flex items-center py-2 px-4 hover:bg-gray-700">
+                        <i class="fas fa-cogs mr-3"></i> Modifica Sito</a></li>
+
+                    <!-- Pulsante per Carica Contenuti -->
+                    <li><a href="Carica_contenuti.html" class="flex items-center py-2 px-4 hover:bg-gray-700">
+                        <i class="fas fa-upload mr-3"></i> Carica Contenuti</a></li>
+                </ul>
+
+                <!-- Sezione Utenti ed Esci -->
+                <div class="mt-auto">
+                    <!-- Utenti -->
+                    <a href="Utenti.html" class="flex items-center py-2 px-4 bg-green-600 hover:bg-green-500 rounded mt-4 text-white">
+                        <i class="fas fa-users mr-3"></i> Utenti
+                    </a>
+                    <!-- Esci -->
+                    <a href="logout.php" class="flex items-center py-2 px-4 bg-red-600 hover:bg-red-500 rounded mt-4 text-white">
+                        <i class="fas fa-sign-out-alt mr-3"></i> Esci
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="flex-1 p-6">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Dashboard</h3>
+                    <p class="text-lg">Benvenuto nella tua Dashboard. Qui puoi gestire tutte le impostazioni e contenuti.</p>
+                </section>
+
+                <!-- Modifica Sito -->
+                <section id="modifica-sito" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Modifica Sito</h3>
+                    <form action="salva_modifiche.php" method="post">
+                        <label for="titolo" class="block text-lg mb-2">Titolo Sito:</label>
+                        <input type="text" id="titolo" name="titolo" class="w-full p-3 mb-4 border border-gray-300 rounded" required>
+
+                        <label for="descrizione" class="block text-lg mb-2">Descrizione:</label>
+                        <textarea id="descrizione" name="descrizione" class="w-full p-3 mb-4 border border-gray-300 rounded" required></textarea>
+
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500">Salva Modifiche</button>
+                    </form>
+                </section>
+
+                <!-- Carica Contenuti -->
+                <section id="carica-contenuti" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Carica Contenuti</h3>
+                    <form>
+                        <label for="file-contenuto" class="block text-lg mb-2">Seleziona File:</label>
+                        <input type="file" id="file-contenuto" name="file-contenuto" class="w-full mb-4 border border-gray-300 p-3 rounded" required>
+
+                        <button type="submit" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-500">Carica</button>
+                    </form>
+                </section>
+
+                <!-- Utenti -->
+                <section id="utenti" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Gestione Utenti</h3>
+                    <p class="text-lg">Qui puoi gestire gli utenti, aggiungere o rimuovere membri dal sistema.</p>
+                </section>
+
+                <!-- Log Auto -->
+                <section id="log-auto" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Log Auto</h3>
+                    <p class="text-lg">Visualizza i log delle auto caricate.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

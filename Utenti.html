@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Utenti - Educorp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+            <a href="index.php" class="text-2xl font-semibold">Educorp</a>
+        </header>
+
+        <div class="flex flex-grow">
+            <!-- Sidebar -->
+            <nav class="w-48 bg-gray-800 text-white p-5">
+                <h2 class="text-center text-xl font-semibold mb-8">Pannelo di controllo</h2>
+                <ul>
+                    <li><a href="dashboard.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-tachometer-alt mr-3"></i> Dashboard</a></li>
+                    <li><a href="modifica_il_sito.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-cogs mr-3"></i> Modifica Sito</a></li>
+                    <li><a href="carica_contenuti.html" class="flex items-center py-2 px-4 hover:bg-gray-700"><i class="fas fa-upload mr-3"></i> Carica Contenuti</a></li>
+                </ul>
+                <div class="mt-auto">
+                    <a href="logout.php" class="flex items-center py-2 px-4 bg-red-600 hover:bg-red-500 rounded mt-4 text-white">
+                        <i class="fas fa-sign-out-alt mr-3"></i> Esci
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="flex-1 p-6">
+                <!-- Gestione Utenti -->
+                <section id="gestione-utenti" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">Gestione Utenti</h3>
+
+                    <!-- Aggiungi Nuovo Utente -->
+                    <form action="aggiungi_utente.php" method="post" class="mb-8">
+                        <div class="flex flex-col mb-4">
+                            <label for="nome" class="text-lg">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="p-2 border border-gray-300 rounded" required>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="email" class="text-lg">Email:</label>
+                            <input type="email" id="email" name="email" class="p-2 border border-gray-300 rounded" required>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="password" class="text-lg">Password:</label>
+                            <input type="password" id="password" name="password" class="p-2 border border-gray-300 rounded" required>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="password_confirm" class="text-lg">Conferma Password:</label>
+                            <input type="password" id="password_confirm" name="password_confirm" class="p-2 border border-gray-300 rounded" required>
+                        </div>
+                        <div class="flex flex-col mb-4">
+                            <label for="ruolo" class="text-lg">Ruolo:</label>
+                            <select id="ruolo" name="ruolo" class="p-2 border border-gray-300 rounded" required>
+                                <option value="admin">Amministratore</option>
+                                <option value="utente">Utente</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500 w-full">Aggiungi Utente</button>
+                    </form>
+
+                    <!-- Elenco Utenti -->
+                    <h4 class="text-xl font-semibold mb-4">Elenco degli Utenti</h4>
+                    <div class="overflow-x-auto">
+                        <table class="table-auto w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2 border-b">Nome</th>
+                                    <th class="px-4 py-2 border-b">Email</th>
+                                    <th class="px-4 py-2 border-b">Ruolo</th>
+                                    <th class="px-4 py-2 border-b">Azioni</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Esempio di Utente -->
+                                <tr>
+                                    <td class="px-4 py-2 border-b">Marco Rossi</td>
+                                    <td class="px-4 py-2 border-b">marco.rossi@example.com</td>
+                                    <td class="px-4 py-2 border-b">Amministratore</td>
+                                    <td class="px-4 py-2 border-b text-center">
+                                        <a href="modifica_utente.php?id=1" class="text-blue-600 hover:text-blue-800">Modifica</a> | 
+                                        <a href="rimuovi_utente.php?id=1" class="text-red-600 hover:text-red-800">Rimuovi</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border-b">Giulia Bianchi</td>
+                                    <td class="px-4 py-2 border-b">giulia.bianchi@example.com</td>
+                                    <td class="px-4 py-2 border-b">Utente</td>
+                                    <td class="px-4 py-2 border-b text-center">
+                                        <a href="modifica_utente.php?id=2" class="text-blue-600 hover:text-blue-800">Modifica</a> | 
+                                        <a href="rimuovi_utente.php?id=2" class="text-red-600 hover:text-red-800">Rimuovi</a>
+                                    </td>
+                                </tr>
+                                <!-- Aggiungi qui altri utenti -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
